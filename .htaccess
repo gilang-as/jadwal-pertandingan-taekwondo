@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# **** INDEX ****
+RewriteRule ^$ index.php [QSA]
+# **** TURNAMEN ****
+RewriteRule ^turnamen$ index.php?halaman=turnamen [QSA]
+RewriteRule ^turnamen/([A-Za-z0-9_-]+)$ index.php?halaman=turnamen&id=$1 [QSA]
+RewriteRule ^pertandingan/([A-Za-z0-9_-]+)$ index.php?halaman=pertandingan&id=$1 [QSA]
