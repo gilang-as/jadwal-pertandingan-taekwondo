@@ -42,8 +42,8 @@
 							include("panel/atlit.php");
 						}elseif($_GET["halaman"]=="laporan"){
 							include("panel/laporan.php");
-						}elseif($_GET["halaman"]=="profile"){
-							include("panel/profile.php");
+						}elseif($_GET["halaman"]=="profil"){
+							include("panel/profil.php");
 						}elseif($_GET["halaman"]=="pengaturan"){
 							include("panel/pengaturan.php");
 						}else{
