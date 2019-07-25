@@ -341,7 +341,6 @@
 					</div>
 				</div>
 			</div>
-<!--Sidebar End-->
 		</div>
 	</div>
 </div>

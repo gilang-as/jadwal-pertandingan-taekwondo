@@ -1,18 +1,5 @@
 <!DOCTYPE html>
-<!-- 
-Template Name: Educo
-Version: 2.0.0
-Author: 
-Website: 
-Purchase: 
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
-
-<!-- Begin Head -->
 <head>
 <meta charset="utf-8" />
 <title>Educo Responsive HTML Template</title>
@@ -112,176 +99,86 @@ Purchase:
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12">
 				<div class="page_title">
-					<h2>Course Lesson</h2>
+					<h2>Educo policy</h2>
 				</div>
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12">
 				<ul class="breadcrumb">
 					<li><a href="index.html">home</a></li>
 					<li><i class="fa fa-chevron-left"></i></li>
-					<li><a href="courses.html">educo courses</a></li>
-					<li><i class="fa fa-chevron-left"></i></li>
-					<li><a href="course_single.html">Single course</a></li>
-					<li><i class="fa fa-chevron-left"></i></li>
-					<li><a href="course_lesson.html">Course Lesson</a></li>
+					<li><a href="private_policy.html">Educo policy</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 </div>
 <!--Breadcrumb end-->
-<!--Single content start-->
+<!--Blog content start-->
 
-<div class="ed_graysection ed_toppadder80 ed_bottompadder80">
-  <div class="container">
-    <div class="row">
-	
-		<div class="col-lg-9 col-md-9 col-sm-12">
-			<div class="ed_course_single_item">
-				<div class="ed_course_single_image">
-					
-					<div class="ed_video_section">
-						<div class="embed-responsive embed-responsive-16by9">
-							<div class="ed_video">
-								<img src="http://placehold.it/806X387" class="img-responsive" alt="1" />
-								<div class="ed_img_overlay">
-									<a href="#"><i class="fa fa-chevron-right"></i></a>
-								</div>
-							</div>
-							<iframe id="educo_video" class="embed-responsive-item" src="https://www.youtube.com/embed/8mb-0qbq984" allowfullscreen></iframe>
-						</div>
-					</div>
-				
+<div class="ed_transprentbg ed_toppadder80 ed_bottompadder80">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+				<div class="ed_heading_top ed_policy_wrapper ed_bottompadder30">
+					<h3>Our policies</h3>
 				</div>
-			<div class="ed_course_single_info">
-				<h2 class="ed_toppadder20">Lesson 1: Basic HTML</h2>
-				
-				<p>Nam id ligula tristique, porta dolor ac, pretium leo. Maecenas scelerisque vulputate dapibus. Quisque sodales tincidunt sapien, eu consequat erat tempus et. Nullam ipsum est, interdum quis posuere sed, imperdiet quis nisi. Proin quis justo est. Vestibulum imperdiet leo sit amet tortor suscipit, id cursus ligula pharetra. Uctus ac eros a, faucibus iaculis quam. Nam non iaculis justo. Donec maximus varius velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula mauris ac facilisis congue. Fusce sem enim, rhoncus volutpat condimentum ac, placerat semper ligula. Suspendisse in viverra justo, eu placerat urna. Vestibulum blandit diam suscipit nibh mattis ullamcorper. Nullam a condimentum nulla, ut facilisis enim. Aliquam sagittis ipsum ex, sed luctus augue venenatis ut.</p>
-				
-				<p>Fusce at rutrum tellus, ac elementum neque. In nec velit orci. Etiam purus felis, pellentesque sit amet tincidunt at, iaculis quis erat. Morbi imperdiet sodales sapien nec rhoncus. Donec placerat mi et libero iaculis, id maximus est vestibulum. Etiam augue augue, auctor at ornare eget, porta ac nisl. Aliquam et mattis dolor, et aliquet ligula.</p>
-
-				<p>Suspendisse euismod sapien facilisis tellus aliquam pellentesque.Donec elementum quam est, a condimentum diam tempor ac. Sed quis magna lobortis, pulvinar est at, commodo mauris.Sed ultricies posuere magna elementum laoreet. Suspendisse elementum sagittis nisl, id pellentesque purus auctor finibus.  Nunc in mollis erat. Integer aliquet orci non auctor pretium. Pellentesque eu nisl augue. Curabitur vitae est ut sem luctus tristique.</p>
-				
-				<button type="button" class="btn ed_btn pull-left ed_orange">preview lesson</button>
-				<button type="button" class="btn ed_btn pull-right ed_orange">next lesson</button>
-				
+				<div class="ed_policy_content">
+					<h5 class="ed_toppadder10 ed_bottompadder10">Workplace Safety Policies</h5>
+					<p>Whether your business operates in a factory or a standard office complex, anyone who steps onto your property faces some level of risk. A data entry worker could develop carpal tunnel syndrome while in your employ. Your company vice president could injure himself moving a computer from one office to another.</p>
+					<h5 class="ed_toppadder10 ed_bottompadder10">Disciplinary Policies</h5>
+					<p>Occasionally you'll have the need to terminate an employee. When that occasion arises, you'll have a much more straightforward experience if the employee has been cautioned about the process. If your expectations for performance are outlined.</p>
+					<h5 class="ed_toppadder10 ed_bottompadder10">Device Use Policies</h5>
+					<p>You may not realize that as an employer, you could be held responsible for the actions of those in your employ. That means if one of your workers conducts illegal activities on one of your systems, you may be answerable for it. Businesses protect themselves against liability in these instances by having a clearly written usage policy that outlines what workers can and cannot do on devices connected to your network.</p>
+					<h5 class="ed_toppadder10 ed_bottompadder10"> Work Hours and Turnaround Time</h5>
+					<p>In the early days, your policies may relate more to your business processes than your team, since you won't have a robust team starting out. One important first step should relate to your availability, including your working hours. Studies show that customers prefer talking to live customer service representatives. </p>
+					<h5 class="ed_toppadder10 ed_bottompadder10">Late Payment Policies</h5>
+					<p>Before you do your first job, you should create a payment process for the work you'll perform. How will you invoice your clients and what forms of payment will be accepted? Set a grace period for payments to be made before a small service charge is added.</p>
+					<h5 class="ed_toppadder10 ed_bottompadder10">Return/Refund Policies</h5>
+					<p>If your business is a retailer or e-commerce business, you should have a return policy clearly posted on your website or store signage. If you put a strict return policy in place, ask yourself whether you plan to stand firmly behind that policy or capitulate for those customers who escalate a complaint up the chain of command.</p>
+					<h5 class="ed_toppadder10 ed_bottompadder10">employee conduct</h5>
+					<p>An employee conduct policy establishes the duties and responsibilities each employee must adhere to as a condition of employment. Conduct policies are in place as a guideline for appropriate employee behavior, and they outline things such as proper dress code, workplace safety procedures, harassment policies and policies regarding computer and Internet usage.</p>
+					<h5 class="ed_toppadder10 ed_bottompadder10">Equal Opportunity</h5>
+					<p>Equal opportunity laws are rules that promote fair treatment in the workplace. Most organizations implement equal opportunity policies -- anti-discrimination and affirmative action policies, for example -- to encourage unprejudiced behavior within the workplace. These policies discourage inappropriate behavior from employees.</p>
+				</div>
 			</div>
-			</div>	
-			<div class="ed_time_executor ed_toppadder40">
-				<ul>
-					<li><a href="course_lesson.html">lessons</a> <span>estimated time</span></li>
-					<li><a href="course_lesson.html">development overview</a> <span><i class="fa fa-check-circle-o"></i></span></li>
-					<li><a href="course_lesson.html">basic html</a> <span>Currently active</span></li>
-					<li><a href="course_lesson.html">Basic CSS</a> <span>Locked</span></li>
-					<li><a href="course_lesson.html">Advanced HTML + CSS</a> <span>Locked</span></li>
-					<li><a href="course_lesson.html">Javascript Beginners</a> <span>Locked</span></li>
-				</ul>
-			</div>
-			</div>
-		
 <!--Sidebar Start-->
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-		<div class="sidebar_wrapper_upper">
-			<div class="sidebar_wrapper">
-			
-				<aside class="widget widget_progress_bar">
-					<h4 class="widget-title">lessons status</h4>
-					<div class="progress">
-						<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
-						<span class="sr-only">75% Complete</span>
-						<p>75% Completed</p>
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<div class="sidebar_wrapper">
+					<aside class="widget widget_search">
+						<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search...">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+						</span>
 						</div>
-					</div>
-				</aside>
-				
-				<aside class="widget widget_categories">
-					<h4 class="widget-title">Search lessons</h4>
-					<ul>
-						<li><a href="#"><i class="fa fa-chevron-right"></i> School Psychology</a></li>
-						<li><a href="#"><i class="fa fa-chevron-right"></i> Youth Counselling</a></li>
-						<li><a href="#"><i class="fa fa-chevron-right"></i> Exam Stress</a></li>
-						<li><a href="#"><i class="fa fa-chevron-right"></i> Our Expertise</a></li>
-						<li><a href="#"><i class="fa fa-chevron-right"></i> Vocational Counselling</a></li>
-						<li><a href="#"><i class="fa fa-chevron-right"></i> Student Guidance</a></li>
-					</ul>
-				</aside>
-				
-				<aside class="widget widget_sharing">
-					<h4 class="widget-title">share this lesson</h4>
-					<ul>
-						<li><a href="course_single.html"><i class="fa fa-facebook"></i> facebook</a></li>
-						<li><a href="course_single.html"><i class="fa fa-linkedin"></i> linkedin</a></li>
-						<li><a href="course_single.html"><i class="fa fa-twitter"></i> twitter</a></li>
-						<li><a href="course_single.html"><i class="fa fa-google-plus"></i> google+</a></li>
-					</ul>
-				</aside>
-				
-			</div>
-		</div>
-		</div>
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<div class="ed_sidebar_slider ed_bottompadder10">
-					<h3>popular courses</h3>
-					<div id="owl-demo3" class="owl-carousel owl-theme">
-						<div class="item">
-							<div class="ed_item_img">
-								<img src="http://placehold.it/263X166" alt="item1" class="img-responsive">
-							</div>
-							<div class="ed_mostrecomeded_course_slider ed_most_recomended_data">
-								<h4><a href="course_single.html">Project Learning </a><span>£25</span></h4>
-							</div>
-						</div>
-						<div class="item">
-							<div class="ed_item_img">
-							<img src="http://placehold.it/263X166" alt="item2" class="img-responsive">
-							</div>
-							<div class="ed_mostrecomeded_course_slider ed_most_recomended_data">
-								<h4><a href="course_single.html">billing seminar</a><span>free</span></h4>
-							</div>
-						</div>
-						<div class="item">
-							<div class="ed_item_img">
-							<img src="http://placehold.it/263X166" alt="item3" class="img-responsive">
-							</div>
-							<div class="ed_mostrecomeded_course_slider ed_most_recomended_data">
-								<h4><a href="course_single.html">User experience Jam </a><span>£38</span></h4>
-							</div>
-						</div>
-						<div class="item">
-							<div class="ed_item_img">
-							<img src="http://placehold.it/263X166" alt="item4" class="img-responsive">
-							</div>
-							<div class="ed_mostrecomeded_course_slider ed_most_recomended_data">
-								<h4><a href="course_single.html">Girls on Rails </a><span>free</span></h4>
-							</div>
-						</div>
-						<div class="item">
-							<div class="ed_item_img">
-								<img src="http://placehold.it/263X166" alt="item1" class="img-responsive">
-							</div>
-							<div class="ed_mostrecomeded_course_slider ed_most_recomended_data">
-								<h4><a href="course_single.html">Coding Seminar </a><span>free</span></h4>
-							</div>
-						</div>
-						<div class="item">
-							<div class="ed_item_img">
-							<img src="http://placehold.it/263X166" alt="item2" class="img-responsive">
-							</div>
-							<div class="ed_mostrecomeded_course_slider ed_most_recomended_data">
-								<h4><a href="course_single.html">Javascript Campus </a><span>£60</span></h4>
-							</div>
-						</div>
-					</div>
+					</aside>
+					<aside class="widget widget_categories">
+						<h4 class="widget-title">Search Categories</h4>
+						<ul>
+							<li><a href="#"><i class="fa fa-chevron-right"></i> School Psychology</a></li>
+							<li><a href="#"><i class="fa fa-chevron-right"></i> Youth Counseling</a></li>
+							<li><a href="#"><i class="fa fa-chevron-right"></i> Exam Stress</a></li>
+							<li><a href="#"><i class="fa fa-chevron-right"></i> Our Experise</a></li>
+							<li><a href="#"><i class="fa fa-chevron-right"></i> Vocational Counseling</a></li>
+							<li><a href="#"><i class="fa fa-chevron-right"></i> Student Guidance</a></li>
+						</ul>
+					</aside>
+					<aside class="widget widget_archive">
+						<h4 class="widget-title">Our Archive</h4>
+						<ul>
+							<li><a href="#"><i class="fa fa-chevron-right"></i> December 2014  (4)</a></li>
+							<li><a href="#"><i class="fa fa-chevron-right"></i> October 2014  (1)</a></li>
+							<li><a href="#"><i class="fa fa-chevron-right"></i> May 2013  (13)</a></li>
+							<li><a href="#"><i class="fa fa-chevron-right"></i> August 2012  (5)</a></li>
+						</ul>
+					</aside>
 				</div>
 			</div>
 <!--Sidebar End-->
-
+		</div>
 	</div>
-  </div>  
-  
 </div>
-
-<!--Single content end-->
+<!--Blog content end-->
 <!--Newsletter Section six start-->
 <div class="ed_newsletter_section" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="100">
 <div class="ed_img_overlay"></div>
@@ -381,8 +278,6 @@ Purchase:
 <!--Footer Bottom section end-->
 </div>
 <!--Page main section end-->
-
-
 
 <!--main js file start--> 
 <script type="text/javascript" src="js/jquery-1.12.2.js"></script> 

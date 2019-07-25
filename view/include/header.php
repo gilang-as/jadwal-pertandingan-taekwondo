@@ -39,27 +39,9 @@
 					</div>
 					<div class="edoco_menu">
 						<ul class="collapse navbar-collapse" id="ed_menu">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">about us</a></li>
-							<li><a href="#">courses</a>
-								<ul class="sub-menu">
-									<li><a href="courses.html">all courses</a></li>
-									<li><a href="course_sidebar.html">course-sidebar</a></li>
-									<li><a href="course_single.html">course-single</a></li>
-									<li><a href="course_lesson.html">course-lesson</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Pages</a>
-								<ul class="sub-menu">
-									<li><a href="instructor_dashboard.html">instructor dashboard</a></li>
-									<li><a href="dashboard.html">student dashboard</a></li>
-									<li><a href="cart.html">cart</a></li>
-									<li><a href="checkout.html">checkout</a></li>
-									<li><a href="purchase_course.html">purchase course</a></li>
-									<li><a href="not_found.html">404 error</a></li>
-								</ul>
-							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="<?php echo $domain;?>">Beranda</a></li>
+							<li><a href="<?php echo $domain;?>turnamen">Turnamen</a></li>
+							<li><a href="<?php echo $domain;?>tentang">Tentang</a></li>
 						</ul>
 					</div>
 				</div>
