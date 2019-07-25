@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="utf-8" />
-<title>Educo Responsive HTML Template</title>
+<title>PengProv Taekwondo Jawa Tengah</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <meta name="description"  content="Educo"/>
 <meta name="keywords" content="Educo, html template, Education template" />
@@ -20,7 +20,7 @@
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12">
 				<div class="page_title">
-					<h2>Single course</h2>
+					<h2>E-SCHEDULE</h2>
 				</div>
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12">
@@ -78,8 +78,8 @@
 							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-right text-right">
 								<div class="ed_course_duration">
 								time duration: 75 days
-								<p>post graduation course</p>
 							</div>
+								<p>post graduation course</p>
 							</div>
 						</div>
 					</div>
@@ -87,10 +87,10 @@
 						<div role="tabpanel">
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs" role="tablist">
-								<li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">description</a></li>
-								<li role="presentation"><a href="#students" aria-controls="students" role="tab" data-toggle="tab">students</a></li>
-								<li role="presentation"><a href="#news" aria-controls="news" role="tab" data-toggle="tab">news</a></li>
-								<li role="presentation"><a href="#events" aria-controls="events" role="tab" data-toggle="tab">events</a></li>
+								<li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Informasi Turnamen</a></li>
+								<li role="presentation"><a href="#students" aria-controls="students" role="tab" data-toggle="tab">Data Atlit</a></li>
+								<li role="presentation"><a href="#news" aria-controls="news" role="tab" data-toggle="tab">Data Wasit</a></li>
+								<li role="presentation"><a href="#events" aria-controls="events" role="tab" data-toggle="tab">Peraih Medali</a></li>
 							</ul>
 							<!-- Tab panes -->
 							<div class="tab-content">
@@ -242,12 +242,12 @@
 				</div>	
 				<div class="ed_time_executor ed_toppadder40">
 					<ul>
-						<li><a href="course_lesson.html">lessons</a> <span>estimated time</span></li>
-						<li><a href="course_lesson.html">development overview</a> <span>1Hourse 10 Minuts</span></li>
-						<li><a href="course_lesson.html">basic html</a> <span>2Hourse 30 Minuts</span></li>
-						<li><a href="course_lesson.html">Basic CSS</a> <span>3Hourse 15 Minuts</span></li>
-						<li><a href="course_lesson.html">Advanced HTML + CSS</a> <span>1Hourse 30 Minuts</span></li>
-						<li><a href="course_lesson.html">Javascript</a> <span>2Hourse 45 Minuts</span></li>
+						<li><a>Jenjang</a> <span>Jumlah Atlit</span></li>
+						<li><a>Pra-Kadet</a> <span>1Hourse 10 Minuts</span></li>
+						<li><a>Kadet</a> <span>2Hourse 30 Minuts</span></li>
+						<li><a>Junior</a> <span>3Hourse 15 Minuts</span></li>
+						<li><a>Senior</a> <span>1Hourse 30 Minuts</span></li>
+						
 					</ul>
 				</div>
 			</div>
@@ -259,7 +259,7 @@
 							<a href="purchase_course.html" class="ed_btn ed_green">Join this course</a>
 						</aside>
 						<aside class="widget widget_categories">
-							<h4 class="widget-title">related courses</h4>
+							<h4 class="widget-title">Daftar Kejuaraan</h4>
 							<ul>
 								<li><a href="course_single.html"><i class="fa fa-chevron-right"></i> Management Prog.</a></li>
 								<li><a href="course_single.html"><i class="fa fa-chevron-right"></i> ethical heaking</a></li>
@@ -273,7 +273,7 @@
 							</ul>
 						</aside>
 						<aside class="widget widget_sharing">
-							<h4 class="widget-title">share this course</h4>
+							<h4 class="widget-title">sosia media</h4>
 							<ul>
 								<li><a href="course_single.html"><i class="fa fa-facebook"></i> facebook</a></li>
 								<li><a href="course_single.html"><i class="fa fa-linkedin"></i> linkedin</a></li>

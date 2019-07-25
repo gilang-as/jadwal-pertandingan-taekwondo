@@ -113,29 +113,6 @@
 									
 									style="z-index: 8; white-space: nowrap;  font-size: 20px; color:#fff;     text-transform: capitalize; font-style: italic;">Growing Online Learning. From this side you read and buy online courses anywhere, any Time.
 								</div>
-
-								<!-- LAYER NR. 5 -->
-								<div class="tp-caption NotGeneric-CallToAction rev-btn ed_btn ed_green rs-parallaxlevel-0" 
-									 id="slide-68-layer-7" 
-									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-									 data-y="['middle','middle','middle','middle']" data-voffset="['124','124','80','65']" 
-												data-width="none"
-									data-height="none"
-									data-whitespace="nowrap"
-									data-transform_idle="o:1;"
-						 
-									 data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;" 
-									 data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-									 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-									data-start="3250" 
-									data-splitin="none" 
-									data-splitout="none" 
-									data-actions='[{"event":"click","action":"scrollbelow","offset":"0px"}]'
-									data-responsive_offset="on" 
-									data-responsive="off"
-									
-									style="z-index: 9; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; padding: 0px 35px;">start now 
-								</div>
 							</li>
 						</ul>
 						<div class="tp-static-layers"></div>

@@ -9,6 +9,7 @@
 <meta name="author"  content="Kamleshyadav"/>
 <meta name="MobileOptimized" content="320" />
 <link href="<?php echo $domain; ?>assets/css/main.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo $domain; ?>assets/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css"/>
 <link rel="shortcut icon" type="image/png" href="<?php echo $domain; ?>assets/images/header/favicon.png" />
 </head>
 <body>
@@ -36,8 +37,8 @@
 					<?php
 						if($_GET["halaman"]=="turnamen"){
 							include("panel/turnamen.php");
-						}elseif($_GET["halaman"]=="pertandingan"){
-							include("panel/pertandingan.php");
+						}elseif($_GET["halaman"]=="wasit"){
+							include("panel/wasit.php");
 						}elseif($_GET["halaman"]=="atlit"){
 							include("panel/atlit.php");
 						}elseif($_GET["halaman"]=="laporan"){
@@ -72,5 +73,26 @@
 <script type="text/javascript" src="<?php echo $domain; ?>assets/js/plugins/countto/jquery.countTo.js"></script>
 <script type="text/javascript" src="<?php echo $domain; ?>assets/js/plugins/countto/jquery.appear.js"></script>
 <script type="text/javascript" src="<?php echo $domain; ?>assets/js/custom.js"></script> 
+<script type="text/javascript" src="<?php echo $domain; ?>assets/select2/dist/js/select2.min.js"></script> 
+<script>
+$('#atlit').select2({
+  selectOnClose: true
+});
+$('#kategori').select2({
+  selectOnClose: true
+});
+$('#jenjang').select2({
+  selectOnClose: true
+});
+$('#tingkatan').select2({
+  selectOnClose: true
+});
+$('#wasit').select2({
+  selectOnClose: true
+});
+$('#turnamen').select2({
+  selectOnClose: true
+});
+</script>
 </body>
 </html>

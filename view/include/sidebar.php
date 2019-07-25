@@ -5,7 +5,7 @@
 						<ul class="nav nav-tabs">
 						  <li><a href="<?php echo $domain; ?>panel">Dashboard</a></li>
 						  <li><a href="<?php echo $domain; ?>panel/turnamen">Turnamen</a></li>
-						  <li><a href="<?php echo $domain; ?>panel/pertandingan">Pertandingan</a></li>
+						  <li><a href="<?php echo $domain; ?>panel/wasit">Wasit</a></li>
 						  <li><a href="<?php echo $domain; ?>panel/atlit">Atlit</a></li>
 						  <li><a href="<?php echo $domain; ?>panel/laporan">Laporan</a></li>
 						  <li><a href="<?php echo $domain; ?>panel/profil">Profil</a></li>

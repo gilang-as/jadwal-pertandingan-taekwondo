@@ -3,8 +3,8 @@
         <div role="tabpanel">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation"><a href="<?php echo $domain ?>panel/wasit">Daftar Atlit</a></li>
-                <li role="presentation"><a href="<?php echo $domain ?>panel/wasit/tambah">Tambah Atlit</a></li>
+                <li role="presentation"><a href="<?php echo $domain ?>panel/wasit">Daftar Wasit</a></li>
+                <li role="presentation"><a href="<?php echo $domain ?>panel/wasit/tambah">Tambah Wasit</a></li>
             </ul>
             <div class="tab-content">
                 <?php if($_GET["tipe"]=="tambah"){ ?>
@@ -52,7 +52,7 @@
                 <?php }else{ ?>
                 <div role="tabpanel" class="tab-pane active">
                     <div class="ed_dashboard_inner_tab">
-                        <h2>Atlit</h2>
+                        <h2>Wasit</h2>
                         <table id="profile_view_settings">
                             <thead>
                                 <tr>
