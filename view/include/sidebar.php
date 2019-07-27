@@ -9,7 +9,7 @@
 						  <li><a href="<?php echo $domain; ?>panel/atlit">Atlit</a></li>
 						  <li><a href="<?php echo $domain; ?>panel/laporan">Laporan</a></li>
 						  <li><a href="<?php echo $domain; ?>panel/profil">Profil</a></li>
-						  <li><a href="<?php echo $domain; ?>panel/peraturan">Pengaturan</a></li>
+						  <li><a href="<?php echo $domain; ?>panel/pengaturan">Pengaturan</a></li>
 						</ul>
 					</div>
 				</div>
