@@ -26,7 +26,7 @@
                         );
                         Insert("tbl_sertawasit",$datawasit);
                     }
-                    echo"Berhasil";
+                    echo"Berhasil Disimpan";
                     }?>
                     <div role="tabpanel" class="tab-pane active" id="personal">
                         <div class="ed_dashboard_inner_tab">
@@ -192,18 +192,29 @@
                             </div>
                         </div>
                     </div> 
-                <?php }elseif($_GET["tipe"]=="ubah" && isset($_GET["id"])){ ?>
+                <?php
+                }elseif($_GET["tipe"]=="ubah" && isset($_GET["id"])){
+                    $quotes_qry="SELECT * FROM tbl_turnamen WHERE id='".$_GET["id"]."'";
+                    $detailturnamen=mysqli_fetch_array(mysqli_query($connect,$quotes_qry));    
+                ?>
                     <?php if(isset($_POST["nama"]) && isset($_POST["lokasi"]) && isset($_POST["penyelenggara"]) && isset($_POST["tanggal"])){
-                    $data=array(
+                     $data=array(
                         "nama"  => $_POST["nama"],
                         "lokasi"  => $_POST["lokasi"],
                         "penyelenggara"  => $_POST["nama"],
                         "tanggal"  => $_POST["tanggal"],
                         "informasi"  => $_POST["informasi"],
                     );
-                    //Insert("tbl_turnamen",$data);
-                    print_r($_POST);
-                    echo"Berhasil";
+                    Update("tbl_turnamen",$data,"WHERE id = '".$_GET['id']."'");
+                    Delete("tbl_sertawasit","WHERE id_turnamen = '".$_GET['id']."'");
+                    foreach($_POST["wasit"] as $wasitkey){
+                        $datawasit=array(
+                            "id_wasit"  => $wasitkey,
+                            "id_turnamen"  => $_GET["id"]
+                        );
+                        Insert("tbl_sertawasit",$datawasit);
+                    }
+                    echo"Berhasil Diubah";
                     }?>
                     <div role="tabpanel" class="tab-pane active" id="personal">
                         <div class="ed_dashboard_inner_tab">
@@ -213,19 +224,19 @@
                                     <form class="ed_tabpersonal" method="POST">
                                         <div class="form-group">
                                         <label for="atlit">Nama Turnamen</label>
-                                            <input name="nama" type="text" class="form-control"  placeholder="Nama Turnamen" required>
+                                            <input name="nama" type="text" value="<?php echo $detailturnamen["nama"];?>" class="form-control"  placeholder="Nama Turnamen" required>
                                         </div>
                                         <div class="form-group">
                                         <label for="atlit">Lokasi</label>
-                                            <input name="lokasi" type="text" class="form-control"  placeholder="Lokasi" required>
+                                            <input name="lokasi" type="text" value="<?php echo $detailturnamen["lokasi"];?>" class="form-control"  placeholder="Lokasi" required>
                                         </div>
                                         <div class="form-group">
                                         <label for="atlit">Penyelenggara</label>
-                                            <input name="penyelenggara" type="text" class="form-control"  placeholder="Penyelenggara" required>
+                                            <input name="penyelenggara" type="text"  value="<?php echo $detailturnamen["penyelenggara"];?>" class="form-control"  placeholder="Penyelenggara" required>
                                         </div>
                                         <div class="form-group">
                                         <label for="atlit">Tanggal</label>
-                                            <input name="tanggal" type="date" class="form-control"  placeholder="Tanggal" required>
+                                            <input name="tanggal" type="date"  value="<?php echo $detailturnamen["tanggal"];?>" class="form-control"  placeholder="Tanggal" required>
                                         </div>
                                         <div class="form-group">
                                         <label for="atlit">Wasit</label>
@@ -241,7 +252,7 @@
                                         </div>
                                         <div class="form-group">
                                         <label for="atlit">Informasi</label>
-                                            <textarea name="informasi" class="form-control" cols="50" rows="5" required></textarea>
+                                            <textarea name="informasi" class="form-control" cols="50" rows="5" required><?php echo $detailturnamen["informasi"];?></textarea>
                                         </div>
                                         <div class="form-group">
                                             <button class="btn ed_btn ed_green" type="submit">Simpan</button>
@@ -250,7 +261,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>  
                 <?php }elseif($_GET["tipe"]=="hapus" && isset($_GET["id"])){ ?>
                 <?php }elseif($_GET["tipe"]=="ubah-peserta"  && isset($_GET["id"])){ ?>
                     <div role="tabpanel" class="tab-pane active" id="personal">
