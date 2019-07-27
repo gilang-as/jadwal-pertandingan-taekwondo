@@ -3,30 +3,42 @@
     "data":[{
         "jenjang":"Prakadet",
         "tingkatan":[
-            "Pemula",
-            "Prestasi"
-            ]
+            {
+            "nama":"Pemula"
+            },
+            {
+                "nama":"Prestasi"
+            }]
         },
         {
         "jenjang":"Kadet",
         "tingkatan":[
-                "Pemula",
-                "Prestasi"
-                ]
+            {
+                "nama":"Pemula"
             },
+            {
+                "nama":"Prestasi"
+            }]
+        },
         {
         "jenjang":"Junior",
         "tingkatan":[
-            "Pemula",
-            "Prestasi"
-            ]
+            {
+                "nama":"Pemula"
+            },
+            {
+                "nama":"Prestasi"
+            }]
         },
         {
         "jenjang":"Senior",
         "tingkatan":[
-                "Pemula",
-                "Prestasi"
-                ]
+            {
+                "nama":"Pemula"
+            },
+            {
+                "nama":"Prestasi"
+            }]
         }
         ]
 },
@@ -35,30 +47,42 @@
     "data":[{
         "jenjang":"Prakadet",
         "tingkatan":[
-            "Pemula",
-            "Prestasi"
-            ]
+            {
+                "nama":"Pemula"
+            },
+            {
+                "nama":"Prestasi"
+            }]
         },
         {
         "jenjang":"Kadet",
         "tingkatan":[
-                "Pemula",
-                "Prestasi"
-                ]
+            {
+                "nama":"Pemula"
             },
+            {
+                "nama":"Prestasi"
+            }]
+        },
         {
         "jenjang":"Junior",
         "tingkatan":[
-            "Pemula",
-            "Prestasi"
-            ]
+            {
+                "nama":"Pemula"
+            },
+            {
+                "nama":"Prestasi"
+            }]
         },
         {
         "jenjang":"Senior",
         "tingkatan":[
-                "Pemula",
-                "Prestasi"
-                ]
+            {
+                "nama":"Pemula"
+            },
+            {
+                "nama":"Prestasi"
+            }]
         }
         ]
 }]

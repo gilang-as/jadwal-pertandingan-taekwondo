@@ -14,3 +14,4 @@ RewriteRule ^pertandingan/([A-Za-z0-9_-]+)$ index.php?halaman=pertandingan&id=$1
 RewriteRule ^panel$ panel.php [QSA]
 RewriteRule ^panel/([A-Za-z0-9_-]+)$ panel.php?halaman=$1 [QSA]
 RewriteRule ^panel/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ panel.php?halaman=$1&tipe=$2 [QSA]
+RewriteRule ^panel/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)$ panel.php?halaman=$1&tipe=$2&id=$3 [QSA]
