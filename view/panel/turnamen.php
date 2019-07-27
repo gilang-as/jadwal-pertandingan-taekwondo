@@ -17,6 +17,15 @@
                         "informasi"  => $_POST["informasi"],
                     );
                     Insert("tbl_turnamen",$data);
+                    $limit="SELECT id FROM tbl_turnamen ORDER BY id DESC LIMIT 1";
+                    $id_turnamen=mysqli_fetch_array(mysqli_query($connect,$limit));
+                    foreach($_POST["wasit"] as $wasitkey){
+                        $datawasit=array(
+                            "id_wasit"  => $wasitkey,
+                            "id_turnamen"  => $id_turnamen["id"]
+                        );
+                        Insert("tbl_sertawasit",$datawasit);
+                    }
                     echo"Berhasil";
                     }?>
                     <div role="tabpanel" class="tab-pane active" id="personal">
@@ -43,9 +52,14 @@
                                         </div>
                                         <div class="form-group">
                                         <label for="atlit">Wasit</label>
-                                            <select name="wasit" class="form-control" id="wasit" multiple="multiple" required>
-                                                <option value="volvo">A</option>
-                                                <option value="volvo">B</option>
+                                            <select name="wasit[]" class="form-control" id="wasit" multiple="multiple" required>
+                                            <?php
+                                            $quotes_qry="SELECT id, nama FROM tbl_wasit";
+                                            $data=mysqli_query($connect,$quotes_qry);
+                                            while($row=mysqli_fetch_array($data)){ 
+                                            ?>
+                                                <option value="<?php echo $row["id"];?>"><?php echo $row["nama"];?></option>
+                                            <?php } ?>
                                             </select>
                                         </div>
                                         <div class="form-group">
@@ -63,7 +77,7 @@
                 <?php
                 }elseif($_GET["tipe"]=="lihat" && isset($_GET["id"])){
                     $quotes_qry="SELECT * FROM tbl_turnamen WHERE id='".$_GET["id"]."'";
-                    $detail=mysqli_fetch_array(mysqli_query($connect,$quotes_qry));
+                    $detailturnamen=mysqli_fetch_array(mysqli_query($connect,$quotes_qry));
                 ?>
                     <div role="tabpanel" class="tab-pane active" id="personal">
                         <div class="ed_dashboard_inner_tab">
@@ -75,7 +89,7 @@
                                         <img src="http://placehold.it/806X387" alt="event image" />
                                     </div>
                                     <div class="ed_course_single_info">
-                                        <h2><?php echo $detail["nama"];?><span>SELESAI</span></h2>
+                                        <h2><?php echo $detailturnamen["nama"];?><span>SELESAI</span></h2>
                                     </div>
                                     <div class="ed_course_single_tab">
                                         <div role="tabpanel">
@@ -88,21 +102,22 @@
                                             <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active" id="description">
                                                     <div class="ed_course_tabconetent">
-                                                    <h2>Tentang Turnamen</h2>
-                                                    <?php echo $detail["informasi"];?>
+                                                        <h2>INFORMASI</h2>
+                                                        <?php echo $detailturnamen["informasi"];?>
                                                     </div>
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane" id="students">
                                                     <div class="ed_inner_dashboard_info">
                                                         <div class="ed_course_single_info">
                                                             <?php 
-                                                            $quotes_qry="SELECT tbl_ikutserta.id_atlit, tbl_ikutserta.id_turnamen, tbl_atlit.* FROM tbl_ikutserta, tbl_atlit WHERE tbl_ikutserta.id='".$_GET["id"]."'";
-                                                            $detail=mysqli_fetch_array(mysqli_query($connect,$quotes_qry));
+                                                            $quotes_qry="SELECT tbl_ikutserta.id_atlit, tbl_ikutserta.id_turnamen, tbl_atlit.* FROM tbl_atlit LEFT JOIN tbl_ikutserta ON tbl_ikutserta.id_atlit = tbl_atlit.id WHERE tbl_ikutserta.id_turnamen='".$_GET["id"]."'";
+                                                            $detail=mysqli_query($connect,$quotes_qry);
+                                                            while($row=mysqli_fetch_array($detail)){ 
                                                             ?>
                                                             <div class="ed_add_students">
                                                                 <img src="http://placehold.it/50X50" alt="">
-                                                                <span>adler braxton</span>
-                                                                <p>new student</p>
+                                                                <span><?php echo $row["nama"];?></span>
+                                                                <p><?php echo $sabuk[$row["sabuk"]]["nama"];?></p>
                                                             </div>
                                                             <?php } ?>
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -123,61 +138,40 @@
                                                     </div>
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane" id="news">
-                                                    <div class="ed_course_tabconetent">
-                                                        <h2>course news</h2>
-                                                        <h5>some recent news about this course....</h5>
-                                                        <p> I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. </p>
+                                                <div class="ed_inner_dashboard_info">
+                                                        <div class="ed_course_single_info">
+                                                            <?php 
+                                                            $quotes_qry="SELECT tbl_sertawasit.id_wasit, tbl_sertawasit.id_turnamen, tbl_wasit.* FROM tbl_wasit LEFT JOIN tbl_sertawasit ON tbl_sertawasit.id_wasit = tbl_wasit.id WHERE tbl_sertawasit.id_turnamen='".$_GET["id"]."'";
+                                                            $detail=mysqli_query($connect,$quotes_qry);
+                                                            while($row=mysqli_fetch_array($detail)){ 
+                                                            ?>
+                                                            <div class="ed_add_students">
+                                                                <img src="http://placehold.it/50X50" alt="">
+                                                                <span><?php echo $row["nama"];?></span>
+                                                                <p><?php echo $sabuk[$row["sabuk"]]["nama"];?></p>
+                                                            </div>
+                                                            <?php } ?>
+                                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                <div class="row">
+                                                                    <div class="ed_blog_bottom_pagination ed_toppadder40">
+                                                                    <nav>
+                                                                        <ul class="pagination">
+                                                                            <li><a href="#">1</a></li>
+                                                                            <li><a href="#">2</a></li>
+                                                                            <li><a href="#">3</a></li>
+                                                                            <li class="active"><a href="#">Next <span class="sr-only">(current)</span></a></li>
+                                                                        </ul>
+                                                                    </nav>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane" id="events">
-                                                    <div class="ed_course_single_info">
-                                                        <h2>total events on this course :-<span>5</span></h2>
-                                                        <div class="ed_course_single_inner_tab">
-                                                            <div role="tabpanel">
-                                                                <!-- Nav tabs -->
-                                                                <ul class="nav nav-tabs" role="tablist">
-                                                                    <li role="presentation" class="active"><a href="#upcoming" aria-controls="upcoming" role="tab" data-toggle="tab">upcoming</a></li>
-                                                                    <li role="presentation"><a href="#past" aria-controls="past" role="tab" data-toggle="tab">past</a></li>
-                                                                </ul>
-                                                                <!-- Tab panes -->
-                                                                <div class="tab-content">
-                                                                    <div role="tabpanel" class="tab-pane active" id="upcoming">
-                                                                        <div class="ed_course_event">
-                                                                            <h5>1. mobile capabilities</h5>
-                                                                            <p><span>orgnaiger :-</span> James Marco</p>
-                                                                            <p><span>held on :-</span> October 1 @ 7:30 Am - 9:00 Am</p>
-                                                                            <p>It is pleasure,  expound the actual teachings of the great explorer of the truthI will give you a complete account of the system, and No one rejects, dislikes, or avoids pleasure itself, because.</p>
-                                                                        </div>
-                                                                        <div class="ed_course_event">
-                                                                            <h5>2. Management Prog.</h5>
-                                                                            <p><span>orgnaiger :-</span> Fumes Sarcoma</p>
-                                                                            <p><span>held on :-</span>October 3 @ 10:30 Am - 2:00 Pm</p>
-                                                                            <p>I will give you a complete account of the system, and No one rejects, dislikes, or avoids pleasure itself, because it is pleasure,  expound the actual teachings of the great explorer of the truth.</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div role="tabpanel" class="tab-pane" id="past">
-                                                                        <div class="ed_course_event">
-                                                                            <h5>1. JavaScript Campus.</h5>
-                                                                            <p><span>orgnaiger :-</span> Tina Fibonacci</p>
-                                                                            <p><span>held on :-</span>September 20 @ 7:30 Pm - 12:00 Am</p>
-                                                                            <p>avoids pleasure itself, because it is pleasure,  expound the actual teachings of the great explorer of the truth will give you a complete account of the system, and No one rejects, dislikes.</p>
-                                                                        </div>
-                                                                        <div class="ed_course_event">
-                                                                            <h5>2. Coding Seminar</h5>
-                                                                            <p><span>orgnaiger :-</span> James Marco</p>
-                                                                            <p><span>held on :-</span> September 10 @ 7:30 Am - 9:00 Am</p>
-                                                                            <p>great explorer of the complete account of the system, and No one rejects, dislikes, or avoids pleasure itself, because it is pleasure,  expound the actual teachings of the truth.</p>
-                                                                        </div>
-                                                                        <div class="ed_course_event">
-                                                                            <h5>3. Project Learning</h5>
-                                                                            <p><span>orgnaiger :-</span> Shy Tommy</p>
-                                                                            <p><span>held on :-</span>September 30 @ 10:30 Am - 2:00 Pm</p>
-                                                                            <p>one rejects, dislikes, or avoids pleasure itself, because it is pleasure, of the system, and No expound the actual teachings of the great explorer of the truth.</p>
-                                                                        </div>
-                                                                    </div>							
-                                                                </div>
-                                                            </div>
-                                                        </div><!--tab End-->
+                                                    <div class="">
+                                                        <h2>PERAIH MENDALI</h2>
+                                                        <?php echo $detailturnamen["informasi"];?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -199,6 +193,64 @@
                         </div>
                     </div> 
                 <?php }elseif($_GET["tipe"]=="ubah" && isset($_GET["id"])){ ?>
+                    <?php if(isset($_POST["nama"]) && isset($_POST["lokasi"]) && isset($_POST["penyelenggara"]) && isset($_POST["tanggal"])){
+                    $data=array(
+                        "nama"  => $_POST["nama"],
+                        "lokasi"  => $_POST["lokasi"],
+                        "penyelenggara"  => $_POST["nama"],
+                        "tanggal"  => $_POST["tanggal"],
+                        "informasi"  => $_POST["informasi"],
+                    );
+                    //Insert("tbl_turnamen",$data);
+                    print_r($_POST);
+                    echo"Berhasil";
+                    }?>
+                    <div role="tabpanel" class="tab-pane active" id="personal">
+                        <div class="ed_dashboard_inner_tab">
+                            <h2>Ubah Turnamen</h2>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <form class="ed_tabpersonal" method="POST">
+                                        <div class="form-group">
+                                        <label for="atlit">Nama Turnamen</label>
+                                            <input name="nama" type="text" class="form-control"  placeholder="Nama Turnamen" required>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="atlit">Lokasi</label>
+                                            <input name="lokasi" type="text" class="form-control"  placeholder="Lokasi" required>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="atlit">Penyelenggara</label>
+                                            <input name="penyelenggara" type="text" class="form-control"  placeholder="Penyelenggara" required>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="atlit">Tanggal</label>
+                                            <input name="tanggal" type="date" class="form-control"  placeholder="Tanggal" required>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="atlit">Wasit</label>
+                                            <select name="wasit[]" class="form-control" id="wasit" multiple="multiple" required>
+                                            <?php
+                                            $quotes_qry="SELECT id, nama FROM tbl_wasit";
+                                            $data=mysqli_query($connect,$quotes_qry);
+                                            while($row=mysqli_fetch_array($data)){ 
+                                            ?>
+                                                <option value="<?php echo $row["id"];?>"><?php echo $row["nama"];?></option>
+                                            <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="atlit">Informasi</label>
+                                            <textarea name="informasi" class="form-control" cols="50" rows="5" required></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn ed_btn ed_green" type="submit">Simpan</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <?php }elseif($_GET["tipe"]=="hapus" && isset($_GET["id"])){ ?>
                 <?php }elseif($_GET["tipe"]=="ubah-peserta"  && isset($_GET["id"])){ ?>
                     <div role="tabpanel" class="tab-pane active" id="personal">
@@ -346,7 +398,7 @@
                                     while($row=mysqli_fetch_array($data)){ 
                                 ?>
 								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ed_bottompadder20">
-                                <a href="<?php echo $domain.'turnamen/'.$row["id"]?>">
+                                <a href="<?php echo $domain.'panel/turnamen/lihat/'.$row["id"]?>">
                                     <div class="ed_item_img">
                                         <img src="http://placehold.it/248X156" alt="item1" class="img-responsive">
                                     </div>
