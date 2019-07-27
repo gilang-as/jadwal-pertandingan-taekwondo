@@ -163,241 +163,43 @@
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="ed_heading_top ed_bottompadder50">
-					<h3>Find the right course</h3>
+					<h3>Pertandingan</h3>
 					<p class="ed_toppadder70">Sometimes students need help with things to make sure you are happy .</p>
 				</div>
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="ed_mostrecomeded_course_slider ed_mostrecomededcourseslider">
 					<div id="owl-demo3" class="owl-carousel owl-theme">
+						<?php
+                        $quotes_qry="SELECT * FROM tbl_turnamen ORDER BY id DESC LIMIT 6";
+                        $data=mysqli_query($connect,$quotes_qry);
+                       	while($row=mysqli_fetch_array($data)){ 
+                         ?>
 						<div class="item">
 							<div class="ed_item_img">
 								<img src="http://placehold.it/263X165" alt="item1" class="img-responsive">
 							</div>
 							<div class="ed_item_description ed_most_recomended_data">
-									<h4><a href="course_single.html">Project Learning </a><span>£25</span></h4>
+									<h4><a href="<?php echo $domain."turnamen/".$row["id"];?>"><?php echo $row["nama"];?></a></h4>
 									<div class="row">
 										<div class="ed_rating">
 											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-												<div class="row">
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-														<div class="ed_stardiv">
-															<div class="star-rating"><span style="width:80%;"></span></div>
-														</div>
-													</div>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-														<div class="row">
-															<p>(5 review)</p>
-														</div>
-													</div>
+												<div class="ed_views">
+												<i class="fa fa-clocks"></i>
+												<span><?php echo $row["tanggal"];?></span>
 												</div>
 											</div>
 											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 												<div class="ed_views">
 												<i class="fa fa-users"></i>
-												<span>35 students</span>
+												<span>35 Peserta</span>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="course_detail">
-										<div class="course_faculty">
-											<a href="courses.html">business</a>
-										</div>
-									</div>
-									<p>Project-Based Learning is a flexible tool for framing given academic standards.</p>
 							</div>
 						</div>
-						<div class="item">
-							<div class="ed_item_img">
-								<img src="http://placehold.it/263X165" alt="item1" class="img-responsive">
-							</div>
-							<div class="ed_item_description ed_most_recomended_data">
-									<h4><a href="course_single.html">Billing Seminar</a><span>free</span></h4>
-									<div class="row">
-										<div class="ed_rating">
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-												<div class="row">
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-														<div class="ed_stardiv">
-															<div class="star-rating"><span style="width:80%;"></span></div>
-														</div>
-													</div>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-														<div class="row">
-															<p>(10 review)</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-												<div class="ed_views">
-												<i class="fa fa-users"></i>
-												<span>55 students</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="course_detail">
-										<div class="course_faculty">
-											<a href="courses.html">management</a>
-										</div>
-									</div>
-									<p>Curriculum projects based on Learning is a tool into  for framing.</p>
-							</div>
-						</div>
-						<div class="item">
-							<div class="ed_item_img">
-								<img src="http://placehold.it/263X165" alt="item1" class="img-responsive">
-							</div>
-							<div class="ed_item_description ed_most_recomended_data">
-									<h4><a href="course_single.html">User Experience Jam </a><span>£38</span></h4>
-									<div class="row">
-										<div class="ed_rating">
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-												<div class="row">
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-														<div class="ed_stardiv">
-															<div class="star-rating"><span style="width:80%;"></span></div>
-														</div>
-													</div>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-														<div class="row">
-															<p>(9 review)</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-												<div class="ed_views">
-												<i class="fa fa-users"></i>
-												<span>60 students</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="course_detail">
-										<div class="course_faculty">
-											<a href="courses.html">it skills</a>
-										</div>
-									</div>
-									<p>Sometimes students need help with things and make sure you are happy .</p>
-							</div>
-						</div>
-						<div class="item">
-							<div class="ed_item_img">
-								<img src="http://placehold.it/263X165" alt="item1" class="img-responsive">
-							</div>
-							<div class="ed_item_description ed_most_recomended_data">
-									<h4><a href="course_single.html">Girls On Rails </a><span>free</span></h4>
-									<div class="row">
-										<div class="ed_rating">
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-												<div class="row">
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-														<div class="ed_stardiv">
-															<div class="star-rating"><span style="width:80%;"></span></div>
-														</div>
-													</div>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-														<div class="row">
-															<p>(8 review)</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-												<div class="ed_views">
-												<i class="fa fa-users"></i>
-												<span>45 students</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="course_detail">
-										<div class="course_faculty">
-											<a href="courses.html">spoken</a>
-										</div>
-									</div>
-									<p>In a lot of various jobs, psychological you will have to deal with prepare you.</p>
-							</div>
-						</div>
-						<div class="item">
-							<div class="ed_item_img">
-								<img src="http://placehold.it/263X165" alt="item1" class="img-responsive">
-							</div>
-							<div class="ed_item_description ed_most_recomended_data">
-									<h4><a href="course_single.html">Coding Seminar</a><span>free</span></h4>
-									<div class="row">
-										<div class="ed_rating">
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-												<div class="row">
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-														<div class="ed_stardiv">
-															<div class="star-rating"><span style="width:80%;"></span></div>
-														</div>
-													</div>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-														<div class="row">
-															<p>(7 review)</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-												<div class="ed_views">
-												<i class="fa fa-users"></i>
-												<span>31 students</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="course_detail">
-										<div class="course_faculty">
-											<a href="courses.html">html/css</a>
-										</div>
-									</div>
-									<p>Coding Seminar is a career focused on helping people job as well right?</p>
-							</div>
-						</div>
-						<div class="item">
-							<div class="ed_item_img">
-								<img src="http://placehold.it/263X165" alt="item1" class="img-responsive">
-							</div>
-							<div class="ed_item_description ed_most_recomended_data">
-									<h4><a href="course_single.html">Javascript Campus</a><span>£60</span></h4>
-									<div class="row">
-										<div class="ed_rating">
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-												<div class="row">
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-														<div class="ed_stardiv">
-															<div class="star-rating"><span style="width:80%;"></span></div>
-														</div>
-													</div>
-													<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-														<div class="row">
-															<p>(1 review)</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-												<div class="ed_views">
-												<i class="fa fa-users"></i>
-												<span>18 students</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="course_detail">
-										<div class="course_faculty">
-											<a href="courses.html">it skills</a>
-										</div>
-									</div>
-									<p>We can offer help for Make sure your kid becomes a superstar in Javascript.</p>
-							</div>
-						</div>
+						   <?php } ?>
 					</div>
 				</div>
 			</div>

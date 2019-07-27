@@ -1,4 +1,4 @@
-<div class="ed_footer_wrapper">
+<div class="ed_footer_wrapper" id="alamat">
 	<div class="ed_footer_top">
 		<div class="container">
 			<div class="row">
@@ -18,18 +18,15 @@
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-12">
 					<div class="widget text-widget">
-						<h4 class="widget-title">find us</h4>
-						<p><i class="fa fa-safari"></i>Wimbledon Street 42a, 45290 Wimbledon, <br/>United Kingdom</p>
-						<p><i class="fa fa-envelope-o"></i><a href="#">info@edutioncollege.gov.co.uk</a> <a href="#">public@edutioncollege.gov.co.uk</a></p>
-						<p><i class="fa fa-phone"></i> 1-220-090-080</p>
+						<h4 class="widget-title">Alamat</h4>
+						<p><i class="fa fa-safari"></i>Tanjungrejo jekulo Kudus, <br/>Jawa Tengah</p>
+						<p><i class="fa fa-envelope-o"></i><a href="#">mail@cyine.id</a> <a href="#">support@cyine.id</a></p>
+						<p><i class="fa fa-phone"></i> +62 852 1872 6798</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-12">
 					<div class="widget text-widget">
-						<h4 class="widget-title">social media</h4>
-						<p><strong>@education </strong> How many students do you educate monthly? Open <a href=""> http://t.co/KFDdzLSD9</a><br/>2 days ago</p>
-						
-						<p><strong>@educationUK </strong> Web Design that works. Have a look at this masterpiece. <a href="">http://t.co/9j8DH93zrO</a><br/>5 days ago</p>
+					<div class="mapouter"><div class="gmap_canvas"><iframe height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=Cyine%20ID%20Kudus&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.bitgeeks.net/embed-google-map/">drupal create embed google map</a></div><style>.mapouter{position:relative;text-align:right;height:300px;}.gmap_canvas {overflow:hidden;background:none!important;height:300px;}</style></div>
 					</div>
 				</div>
 			</div>
@@ -48,10 +45,7 @@
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<div class="ed_footer_menu">
 						<ul>
-							<li><a href="index.html">home</a></li>
-							<li><a href="private_policy.html">private policy</a></li>
-							<li><a href="about.html">about</a></li>
-							<li><a href="contact.html">contact us</a></li>
+							<li><a href="<?php echo $domain; ?>">Beranda</a></li>
 						</ul>
 				</div>
 			</div>

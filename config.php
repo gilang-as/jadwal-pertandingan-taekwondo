@@ -1,5 +1,6 @@
 <?php
 error_reporting(0);
+session_start();
 include("function.php");
 $domain="http://project/japerta/";
 $hostname="localhost";

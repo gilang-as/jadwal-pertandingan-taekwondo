@@ -63,4 +63,10 @@ function Delete($table_name, $where_clause=''){
     // run and return the query result resource
     return mysqli_query($connect,$sql);
 }  
+function total_peserta($jenjang,$turnamen){
+    global $connect;
+    $quotes_qry="SELECT COUNT(id) as total FROM tbl_ikutserta WHERE id_turnamen=$turnamen AND jenjang=$jenjang";
+    $data = mysqli_fetch_array(mysqli_query($connect,$quotes_qry)); 
+    return $data["total"];
+}
 ?>

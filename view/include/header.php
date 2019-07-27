@@ -3,26 +3,44 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12">
-					<p>welcome guest</p>
+					<p>SELAMAT DATANG</p>
 					<div class="ed_info_wrapper">
-						<a href="#" id="login_button">Login</a>
-							<div id="login_one" class="ed_login_form">
+						<?php if(empty($_SESSION)){?>
+						<a href="#" id="login_button">MASUK</a>
+						<?php }else{ ?>
+						<a href="<?php echo $domain."panel";?>">PANEL</a>
+						<?php }?>
+						<div id="login_one" class="ed_login_form">
 								<h3>log in</h3>
-								<form class="form">
+								<form class="form" method="POST">
 									<div class="form-group">
-										<label class="control-label">Email :</label>
-										<input type="text" class="form-control" >
+										<label class="control-label">Username :</label>
+										<input type="text" name="username" class="form-control" >
 									</div>
 									<div class="form-group">
-										<label  class="control-label">Password :</label>
-										<input type="password" class="form-control">
+										<label  class="control-label">Sandi :</label>
+										<input type="password" name="sandi" class="form-control">
 									</div>
 									<div class="form-group">
 										<button type="submit">login</button>
-										<a href="signup.html">sign up</a>	
 									</div>
 								</form>
-							</div>
+								<?php 
+								if(isset($_POST["username"]) && isset($_POST["sandi"])){
+									$username = $_POST['username'];
+									$sandi = md5($_POST['sandi']);
+									$profil_qry="SELECT * FROM tbl_pengguna WHERE username='".$username."' AND password='".$sandi."'";
+									$profil=mysqli_fetch_assoc(mysqli_query($connect,$profil_qry));
+									$cek=mysqli_num_rows(mysqli_query($connect,$profil_qry));
+									if($cek > 0){
+										$_SESSION['status'] = "masuk";
+										header("location:".$domain."panel");
+									}else{
+									header("location:".$domain);
+									}
+								}
+								?>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -41,7 +59,7 @@
 						<ul class="collapse navbar-collapse" id="ed_menu">
 							<li><a href="<?php echo $domain;?>">Beranda</a></li>
 							<li><a href="<?php echo $domain;?>turnamen">Turnamen</a></li>
-							<li><a href="<?php echo $domain;?>tentang">Tentang</a></li>
+							<li><a href="#alamat">Alamat</a></li>
 						</ul>
 					</div>
 				</div>

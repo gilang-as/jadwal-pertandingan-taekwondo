@@ -9,7 +9,7 @@
 <meta name="author"  content="Kamleshyadav"/>
 <meta name="MobileOptimized" content="320" />
 <link href="<?php echo $domain; ?>assets/css/main.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo $domain; ?>assets/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet" />
 <link rel="shortcut icon" type="image/png" href="<?php echo $domain; ?>assets/images/header/favicon.png" />
 </head>
 <body>
@@ -71,7 +71,7 @@
 <script type="text/javascript" src="<?php echo $domain; ?>assets/js/plugins/countto/jquery.countTo.js"></script>
 <script type="text/javascript" src="<?php echo $domain; ?>assets/js/plugins/countto/jquery.appear.js"></script>
 <script type="text/javascript" src="<?php echo $domain; ?>assets/js/custom.js"></script> 
-<script type="text/javascript" src="<?php echo $domain; ?>assets/select2/dist/js/select2.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js"></script>
 <script>
 $('#atlit').select2({
   selectOnClose: true
