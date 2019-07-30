@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Jul 2019 pada 09.56
+-- Waktu pembuatan: 30 Jul 2019 pada 14.21
 -- Versi server: 10.1.36-MariaDB
 -- Versi PHP: 5.6.38
 
@@ -42,7 +42,6 @@ CREATE TABLE `tbl_atlit` (
 --
 
 INSERT INTO `tbl_atlit` (`id`, `nama`, `jekel`, `dojang`, `sabuk`, `bb`) VALUES
-(8, 'Agus', 'lk', 'Kudus', 0, '76Kg'),
 (9, 'Beno', 'lk', 'Kudus', 0, '76'),
 (10, 'Anggita', 'pr', 'Kudus', 3, '65Kg');
 
@@ -61,14 +60,6 @@ CREATE TABLE `tbl_ikutserta` (
   `tingkatan` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data untuk tabel `tbl_ikutserta`
---
-
-INSERT INTO `tbl_ikutserta` (`id`, `id_atlit`, `id_turnamen`, `kategori`, `jenjang`, `tingkatan`) VALUES
-(1, 8, 1, 1, 0, 1),
-(2, 9, 1, 1, 2, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -85,7 +76,7 @@ CREATE TABLE `tbl_pengguna` (
 --
 
 INSERT INTO `tbl_pengguna` (`username`, `password`) VALUES
-('a', '0cc175b9c0f1b6a831c399e269772661');
+('admin', '21232f297a57a5a743894a0e4a801fc3');
 
 -- --------------------------------------------------------
 
@@ -104,9 +95,7 @@ CREATE TABLE `tbl_sertawasit` (
 --
 
 INSERT INTO `tbl_sertawasit` (`id`, `id_wasit`, `id_turnamen`) VALUES
-(6, 1, 7),
-(7, 2, 7),
-(8, 2, 1);
+(9, 3, 8);
 
 -- --------------------------------------------------------
 
@@ -120,16 +109,16 @@ CREATE TABLE `tbl_turnamen` (
   `lokasi` varchar(225) NOT NULL,
   `penyelenggara` varchar(1000) NOT NULL,
   `tanggal` date NOT NULL,
-  `informasi` text NOT NULL
+  `informasi` text NOT NULL,
+  `img` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `tbl_turnamen`
 --
 
-INSERT INTO `tbl_turnamen` (`id`, `nama`, `lokasi`, `penyelenggara`, `tanggal`, `informasi`) VALUES
-(1, 'PONAS', 'Jakarta', 'PONAS', '2018-01-02', 'Ada Apa denganmu'),
-(7, 'POBDA', 'Pati', 'POBDA', '2017-03-05', 'AKusa');
+INSERT INTO `tbl_turnamen` (`id`, `nama`, `lokasi`, `penyelenggara`, `tanggal`, `informasi`, `img`) VALUES
+(8, 'A', 'a', 'A', '0001-02-02', 'sas', 'Screenshot (1).png');
 
 -- --------------------------------------------------------
 
@@ -151,8 +140,7 @@ CREATE TABLE `tbl_wasit` (
 --
 
 INSERT INTO `tbl_wasit` (`id`, `nama`, `ttl`, `jekel`, `asal`, `sabuk`) VALUES
-(1, 'Mulyanto', 'Kudus, 2 Januari 1975', 'lk', 'Semarang', 3),
-(2, 'Meytania', 'Surabaya, 3  Maret 1998', 'pr', 'Bandung', 2);
+(3, 'Agung', '1982-09-02', 'lk', 'Kudus', 0);
 
 --
 -- Indexes for dumped tables
@@ -218,19 +206,19 @@ ALTER TABLE `tbl_ikutserta`
 -- AUTO_INCREMENT untuk tabel `tbl_sertawasit`
 --
 ALTER TABLE `tbl_sertawasit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_turnamen`
 --
 ALTER TABLE `tbl_turnamen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_wasit`
 --
 ALTER TABLE `tbl_wasit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

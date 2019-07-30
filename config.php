@@ -2,6 +2,7 @@
 error_reporting(0);
 session_start();
 include("function.php");
+include("library/fpdf181/fpdf.php");
 $domain="http://project/japerta/";
 $hostname="localhost";
 $username="root";

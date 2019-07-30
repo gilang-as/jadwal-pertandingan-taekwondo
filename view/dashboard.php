@@ -10,6 +10,7 @@
 <meta name="MobileOptimized" content="320" />
 <link href="<?php echo $domain; ?>assets/css/main.css" rel="stylesheet" type="text/css"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
 <link rel="shortcut icon" type="image/png" href="<?php echo $domain; ?>assets/images/header/favicon.png" />
 </head>
 <body>
@@ -92,5 +93,12 @@ $('#turnamen').select2({
   selectOnClose: true
 });
 </script>
+<script>
+$(document).ready(function() {
+    $('#siswa').DataTable();
+    $('#wasit').DataTable();
+} );
+</script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> 
 </body>
 </html>

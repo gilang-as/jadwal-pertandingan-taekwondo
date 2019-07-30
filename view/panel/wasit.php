@@ -32,8 +32,8 @@
                                         <input name="nama" type="text" class="form-control" placeholder="Nama">
                                     </div>
                                     <div class="form-group">
-                                        <label for="ttl">Tempat Tanggal Lahir</label>
-                                        <input name="ttl" type="text" class="form-control" placeholder="Tempat Tanggal Lahir">
+                                        <label for="ttl">Tanggal Lahir</label>
+                                        <input name="ttl" type="date" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="jekel">Jenis Kelamin</label>
@@ -90,8 +90,8 @@
                                         <input name="nama" type="text" class="form-control" placeholder="Nama" value="<?php echo $detail['nama'];?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="ttl">Tempat Tanggal Lahir</label>
-                                        <input name="ttl" type="text" class="form-control" placeholder="Tempat Tanggal Lahir" value="<?php echo $detail['ttl'];?>">
+                                        <label for="ttl">Tanggal Lahir</label>
+                                        <input name="ttl" type="date" class="form-control" value="<?php echo $detail['ttl'];?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="jekel">Jenis Kelamin</label>
@@ -130,7 +130,7 @@
                 <div role="tabpanel" class="tab-pane active">
                     <div class="ed_dashboard_inner_tab">
                         <h2>Wasit</h2>
-                        <table id="profile_view_settings">
+                        <table id="siswa" class="display" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>No</th>

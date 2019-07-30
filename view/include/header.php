@@ -34,6 +34,7 @@
 									$cek=mysqli_num_rows(mysqli_query($connect,$profil_qry));
 									if($cek > 0){
 										$_SESSION['status'] = "masuk";
+										$_SESSION['username'] = $profil["username"];
 										header("location:".$domain."panel");
 									}else{
 									header("location:".$domain);

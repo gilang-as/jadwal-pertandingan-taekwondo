@@ -129,7 +129,7 @@
                 <div role="tabpanel" class="tab-pane active">
                     <div class="ed_dashboard_inner_tab">
                         <h2>Atlit</h2>
-                        <table id="profile_view_settings">
+                        <table id="siswa" class="display" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>No</th>

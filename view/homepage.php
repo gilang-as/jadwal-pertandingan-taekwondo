@@ -177,7 +177,7 @@
                          ?>
 						<div class="item">
 							<div class="ed_item_img">
-								<img src="http://placehold.it/263X165" alt="item1" class="img-responsive">
+								<img src="<?php echo $domain."upload/".$row["img"]?>" alt="item1" class="img-responsive">
 							</div>
 							<div class="ed_item_description ed_most_recomended_data">
 									<h4><a href="<?php echo $domain."turnamen/".$row["id"];?>"><?php echo $row["nama"];?></a></h4>
@@ -204,7 +204,7 @@
 				</div>
 			</div>
 		</div>
-    </div><!-- /.container -->
+    </div>
 </div>
 <?php include("include/footer.php");?>
 </div>
